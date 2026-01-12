@@ -1,0 +1,22 @@
+/* ================= Footer ================= */
+.footer {
+  background-color: #111827; /* dark navy */
+  color: #d1d5db; /* light gray */
+  padding: 30px 20px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  margin-top: 50px;
+  border-top: 1px solid #374151;
+}
+
+.footer a {
+  color: #3b82f6;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: all 0.2s ease;
+}
+
+.footer a:hover {
+  color: #60a5fa;
+  text-decoration: underline;
+}

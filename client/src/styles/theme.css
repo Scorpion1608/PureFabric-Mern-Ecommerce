@@ -1,0 +1,36 @@
+/* =====================
+   GLOBAL THEME
+===================== */
+
+:root {
+  --primary: #111827;     /* dark navy */
+  --secondary: #16a34a;   /* green */
+  --light-bg: #f5f7fa;    /* off white */
+  --card-bg: #ffffff;
+  --text-dark: #111;
+  --text-light: #6b7280;
+  --border: #e5e7eb;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text-dark);
+}
+
+/* =====================
+   COMMON UTILITIES
+===================== */
+
+.container {
+  max-width: 1200px;
+}
+
+.shadow-sm {
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+.rounded {
+  border-radius: 8px;
+}

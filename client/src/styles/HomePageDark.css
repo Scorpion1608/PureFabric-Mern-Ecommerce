@@ -1,0 +1,193 @@
+/* Full viewport hero (edge-to-edge between navbar/footer) */
+.heroDark {
+  color: #fff;
+  background:
+    radial-gradient(1200px 600px at 20% 10%, rgba(255,255,255,0.08), transparent 55%),
+    radial-gradient(900px 500px at 85% 20%, rgba(255,255,255,0.06), transparent 55%),
+    linear-gradient(180deg, #0c0f14 0%, #07090d 100%);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.heroFull {
+  width: 100vw;
+  margin: 0;
+  margin-left: calc(-50vw + 50%);
+  border-radius: 0;
+  min-height: calc(100vh - 140px); /* CHANGE 140px = navbar height + footer height */
+  border: none;
+}
+
+/* main content */
+.heroMain {
+  padding: 44px 22px 28px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.heroCopy {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  font-size: 12px;
+  color: rgba(255,255,255,0.86);
+}
+
+.heroTitle {
+  margin: 14px 0 0;
+  font-size: clamp(32px, 4.5vw, 40px);
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+.heroSub {
+  margin: 12px auto 0;
+  max-width: 640px;
+  color: rgba(255,255,255,0.72);
+  font-size: clamp(14px, 1.8vw, 16px);
+}
+
+.heroBtns {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+/* buttons */
+.ghostBtn,
+.solidBtn {
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.16);
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.ghostBtn {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+.solidBtn {
+  background: #fff;
+  color: #0b0f14;
+  border-color: rgba(255,255,255,0.35);
+}
+
+.ghostBtn:hover,
+.solidBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+/* slider */
+.lookStrip {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: 44px 1fr 44px;
+  align-items: center;
+  gap: 12px;
+}
+
+.navArrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.navArrow:hover {
+  background: rgba(255,255,255,0.12);
+  transform: scale(1.05);
+}
+
+.lookList {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 6px 2px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.lookList::-webkit-scrollbar {
+  display: none;
+}
+
+.lookCard {
+  min-width: 140px;
+  height: 160px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.04);
+  cursor: pointer;
+  scroll-snap-align: start;
+  position: relative;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.lookCard:hover {
+  transform: translateY(-4px);
+  outline: 2px solid rgba(255,255,255,0.25);
+}
+
+.lookCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.92;
+}
+
+.lookCardActive {
+  outline: 2px solid rgba(255,255,255,0.55);
+  transform: translateY(-1px);
+}
+
+.lookName {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.14);
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .heroMain { padding: 34px 18px 24px; }
+  .lookStrip { grid-template-columns: 38px 1fr 38px; }
+  .navArrow { width: 38px; height: 38px; font-size: 20px; }
+}
+
+@media (max-width: 520px) {
+  .heroMain { padding: 28px 16px 20px; }
+  .heroBtns { flex-direction: column; align-items: center; }
+  .lookCard { min-width: 120px; height: 140px; }
+}

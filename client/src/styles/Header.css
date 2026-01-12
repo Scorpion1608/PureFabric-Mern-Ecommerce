@@ -1,0 +1,33 @@
+/* ================= Navbar ================= */
+.navbar {
+  background-color: #111827 !important; /* dark navy */
+  padding: 12px 20px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar .navbar-brand {
+  color: #3b82f6 !important; /* bright blue */
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar .nav-link {
+  color: #d1d5db !important; /* light gray */
+  margin-right: 15px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #3b82f6 !important; /* blue hover */
+}
+
+/* Mobile toggle */
+.navbar-toggler {
+  border-color: #3b82f6;
+}
+
+.navbar-toggler-icon {
+  background-color: #3b82f6;
+}
